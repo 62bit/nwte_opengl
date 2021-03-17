@@ -1,16 +1,16 @@
 flags="-g -O0"
-includes="-I /home/eax/Desktop/sdl_game/dependencies/ \
-	  -I /home/eax/Desktop/sdl_game/dependencies/GLEW \
-	  -I /home/eax/Desktop/sdl_game/dependencies/SDL2/include/ \
-	  -I /home/eax/Desktop/sdl_game/dependencies/SDL2_image/include \
-	  -I /home/eax/Desktop/sdl_game/dependencies/SDL2_ttf/include \
-	  -I /home/eax/Desktop/sdl_game/code/"
+includes="-I ../dependencies/ \
+	  -I ../dependencies/GLEW \
+	  -I ../dependencies/SDL2/include/ \
+	  -I ../dependencies/SDL2_image/include \
+	  -I ../dependencies/SDL2_ttf/include \
+	  -I ../sdl_game/code/"
 
-files="/home/eax/Desktop/sdl_game/code/*.cpp"
+files="../code/*.cpp"
 
 libs="-lSDL2 -lGL -lGLEW"
 
-pushd /home/eax/Desktop/sdl_game/lbuild/
+pushd ./lbuild/
 time g++ $flags $includes $files $libs
 popd
 
